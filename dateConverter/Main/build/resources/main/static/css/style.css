@@ -38,9 +38,10 @@ body {
 .login p.submit {
     text-align: center;
 }
-.login input[type=text] {
+.login input[type=text]  {
     width: 278px;
 }
+
 .login p {
     margin: 20px 0 0;
 }
@@ -77,7 +78,7 @@ body {
 
 
 input {
-    font-family: Georgia,'Lucida Grande', sans-serif;
+    font-family: Georgia, sans-serif;
     font-size: 14px;
 }
 

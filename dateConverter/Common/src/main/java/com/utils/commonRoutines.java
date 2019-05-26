@@ -4,14 +4,17 @@ import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 
-public class commonRoutines {
+public  class commonRoutines {
     final String DATE_FORMAT = "dd-MM-yyyy hh:mm a";
+    private ZonedDateTime utc;
+
+    public void setUtc(ZonedDateTime utc) {
+        this.utc = utc;
+    }
+
     public DateTimeFormatter formatter = DateTimeFormatter.ofPattern(DATE_FORMAT);
-    public ZonedDateTime getDate(String zone, ZonedDateTime utc){
-        return utc.withZoneSameInstant(ZoneId.of(zone));
+    public String getDate(String zone){
+        return formatter.format(utc.withZoneSameInstant(ZoneId.of(zone)));
     }
-    public String ret_view(ZonedDateTime date)
-    {
-        return formatter.format(date);
-    }
+
 }
