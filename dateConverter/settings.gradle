@@ -1,0 +1,5 @@
+rootProject.name = 'dateConverter'
+include 'Main'
+include 'Common'
+enableFeaturePreview('IMPROVED_POM_SUPPORT')
+
